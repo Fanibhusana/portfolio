@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* Global Design System */
+
+/* Default to dark if no class applied */
+:root {
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cfcfcf;
+
+  --color-neon-green: #00f5a0;
+  --color-neon-blue: #00c3ff;
+  --color-neon-pink: #ff4ecd;
+
+  --gradient-neon: linear-gradient(135deg, var(--color-neon-green), var(--color-neon-blue));
+
+  --font-main: 'Inter', sans-serif;
+  --font-futuristic: 'Orbitron', sans-serif;
+}
+
+
+/* Override variables in dark mode */
+.dark {
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cfcfcf;
+
+  --color-neon-green: #00f5a0;
+  --color-neon-blue: #00c3ff;
+  --color-neon-pink: #ff4ecd;
+}
+
+/* Global styles */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-main);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-futuristic);
+  color: var(--color-text-primary);
+}
+
+/* ✅ Custom components */
+@layer components {
+  .btn-neon {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    background: var(--gradient-neon);
+    color: black;
+    box-shadow: 0 0 20px var(--color-neon-green);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn-neon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--color-neon-blue);
+  }
+
+  .card-neon {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-neon-green);
+    box-shadow: 0 0 10px var(--color-neon-green);
+    transition: transform 0.3s ease;
+  }
+
+  .card-neon:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 0 20px var(--color-neon-blue);
+  }
+}
+
+
+
+
+
