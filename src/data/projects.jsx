@@ -6,7 +6,7 @@ export const projects = [
         description: "Mitra is a full-stack charity donation platform that allows users to donate seamlessly to various charities. Built with React.js, Vite, Spring Boot, and MySQL, the platform ensures a secure, efficient, and user-friendly experience. It allows users and charity organizations to manage their profiles, upload images, and handle transactions securely.",
         image: "/mitra.png", // Replace with your image
         tech: ["Java", "Spring Boot", "React.js","MySQL","Tailwind CSS"],
-        demo: "https://www.mitras.media/",
+        demo: "https://mitra-pi.vercel.app/",
         github: "https://github.com/Fanibhusana/mitra.git",
     },
     {
